@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Начало | GKS Sweets</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <img src="img/logo.png" alt="GKS Logo" class="header-logo">
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Начало</a></li>
+          <li><a href="zaviti_pocherpki.html">Завити почерпки</a></li>
+          <li><a href="cookies.html">Cookies</a></li>
+          <li><a href="grizini.html">Гризини</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <h1 class="fancy-welcome">Добре дошли в <span>GKS Sweets</span></h1>
+  <p class="note">Изкушения, които разказват история във всяка хапка.</p>
+
+  <section class="gallery">
+    <div class="gallery-item">
+      <img src="img/d4a74e_cfbc10425ff3480eb847914d62862982~mv2.png" alt="Фурмите">
+      <a href="zaviti_pocherpki.html" class="gallery-button">ПОЧЕРПКИ</a>
+    </div>
+    <div class="gallery-item">
+      <img src="img/d4a74e_9a2b638048b04ffd92bc5e94c6aa8ba4~mv2.png" alt="Cookies">
+      <a href="cookies.html" class="gallery-button">COOKIES</a>
+    </div>
+    <div class="gallery-item">
+      <img src="img/Copilot_20250723_141939.png" alt="Гризини">
+      <a href="grizini.html" class="gallery-button">ГРИЗИНИ</a>
+    </div>
+  </section>
+
+  <footer>
+    <img src="img/logo.png" alt="GKS Logo" class="footer-logo">
+    <h2>Контакти</h2>
+    <p>
+      <strong>Тел:</strong> <a href="tel:+359879110848">+359 879 110 848</a><br>
+      <strong>Email:</strong> <a href="mailto:gks2017ltd@abv.bg">gks2017ltd@abv.bg</a><br>
+      <strong>Катерина Стефанури</strong>
+    </p>
+    <p>
+      <strong>Адрес склад:</strong> 62046 Xryso Serres<br>
+      <strong>Тел:</strong> <a href="tel:+306933309110">+30 6933309110</a><br>
+      <strong>Georgios Stefanuris</strong>
+    </p>
+  </footer>
+
+  <button id="scrollTopBtn" title="Scroll to top">↑</button>
+
+  <script>
+    const toggleBtn = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    const header = document.querySelector("header");
+
+    toggleBtn?.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      toggleBtn.classList.toggle('open');
+    });
+
+    window.addEventListener("scroll", () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+      header.classList.toggle("sticky", window.scrollY > 50);
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+</body>
+</html>
