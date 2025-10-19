@@ -1,0 +1,107 @@
+@import url("menu.css");
+
+body {
+  background-color: #fdf6f0; /* soft vanilla */
+}
+
+.fancy-welcome {
+  font-size: 3.4rem;
+  margin: 2rem auto 0;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #3e2a1e; /* rich cocoa */
+  animation: fadeInDown 1s ease-out;
+  max-width: 90%;
+}
+
+.fancy-welcome span {
+  color: #a86b4c; /* warm caramel accent */
+  font-style: italic;
+}
+
+.note {
+  font-size: 1.4rem;
+  color: #6b4a2f; /* toasted almond */
+  text-align: center;
+  margin: 0.5rem auto 2rem;
+  animation: fadeInDown 1.2s ease-out;
+  max-width: 80%;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 4rem;
+  padding: 2rem;
+  max-width: 1400px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 7px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  border: 3px solid #5c3a21;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  animation: fadeInUp 1s ease-out;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  margin: 0;
+  display: block;
+}
+
+.gallery-button {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 2rem;
+  background-color: #5c3a21;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.gallery-button:hover {
+  background-color: #7b5b44;
+  transform: translateX(-50%) scale(1.05);
+}
